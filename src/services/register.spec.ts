@@ -25,8 +25,8 @@ describe('Register Services', () => {
     const registerService = new RegisterService(usersRepository)
 
     const { user } = await registerService.execute({
-      name: 'DevMikera',
-      email: 'devmikera@gmail.com',
+      name: 'Test',
+      email: 'test@gmail.com',
       password: '123456',
     })
 
