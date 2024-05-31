@@ -1,8 +1,8 @@
+import { User } from '@prisma/client'
 import { hash } from 'bcryptjs'
 
 import { IUsersRepository } from '@/repositories/users-repository'
 import { UserAlreadyExistsError } from './errors/user-already-exists-error'
-import { User } from '@prisma/client'
 
 interface IRegisterProps {
   name: string
