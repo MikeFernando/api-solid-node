@@ -16,8 +16,8 @@ describe('Register Services', () => {
 
   it('should be able to register', async () => {
     const { user } = await sut.execute({
-      name: 'Test',
-      email: 'test@gmail.com',
+      name: 'Jonh Doe',
+      email: 'johndoe@gmail.com',
       password: '123456',
     })
 
@@ -26,8 +26,8 @@ describe('Register Services', () => {
 
   it('should hash user password upon registration', async () => {
     const { user } = await sut.execute({
-      name: 'Test',
-      email: 'test@gmail.com',
+      name: 'John Doe',
+      email: 'johndoe@gmail.com',
       password: '123456',
     })
 
@@ -40,10 +40,10 @@ describe('Register Services', () => {
   })
 
   it('should not be able to register with same email twice', async () => {
-    const email = 'teste@gmail.com'
+    const email = 'johndoe@gmail.com'
 
     await sut.execute({
-      name: 'Teste',
+      name: 'John Doe',
       email,
       password: '123456',
     })
